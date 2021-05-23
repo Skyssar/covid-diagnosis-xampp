@@ -1,0 +1,277 @@
+*{
+    margin: 0 ;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-image: linear-gradient(rgb(5, 5, 68), rgb(36, 11, 175)); */
+    font-family: 'Roboto', sans-serif;
+    /* padding: 90px 100px 20px 100px;  */
+    /* (UP - RIGHT - DOWN - LEFT ) */
+    padding: 90px 20px 0px;
+    /* (UP - RIGTH&LEFT - DOWN)*/ 
+}
+
+.header{
+    background-color: rgb(4, 4, 65);
+    color: white;
+    height: 80px;
+    position: fixed; /* Para que la barra de navegación quede fija */
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px; /* el ancho máximo en pantalla*/
+    margin: 0 auto; /* centrarlo */
+}
+
+.nav-link{ 
+    /* Quitarle la decoración a los anchor */
+    color: white;
+    text-decoration: none;
+}
+
+.nav-menu-logo{
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo{
+    width: 65px;
+}
+
+.nav-menu-title{
+    font-weight: bold;
+    font-size: 35px;
+    padding-right: 50px;
+    padding-left: 15px;
+    line-height: 80px;
+    min-width: max-content;
+}
+
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item{
+    font-size: 16px;
+    margin: 0px 20px;
+    line-height: 80px; /* centrar una linea de texto*/
+    min-width: max-content; /* para que nunca se salga el texto de su box */
+}
+
+.nav-logo-link:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.nav-menu-link:hover{
+    color: rgb(179, 179, 240);
+    transition: 0.3s; /* la demora en el efecto */
+}
+
+.nav-toggle{
+    /* estilos para el boton */
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    display: none;
+}
+
+
+.container{
+    border: 3px solid rgb(4, 4, 65);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap; /* para que los boxes hijos bajen responsively cuando no hay espacio*/
+    align-items: center;
+
+}
+
+.principal-container{
+    margin: 10px 30px;
+    padding: 30px 0px 50px 0px;
+    justify-content: space-evenly;
+    border-width: 5px;
+    min-width: 450px;
+}
+
+.enunciado{
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.option-card{
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+
+}
+
+.option-card-text {
+    position: absolute;
+    top: 25%;
+    font-size: 27pt;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    z-index: -1; /* detrás de cualquier otro en posicion relative */
+}
+
+.option-card-img{
+    width: 300px;
+    height: 230px;
+    border-radius: 10px;
+}
+
+.option-card-img:hover{
+    opacity: 0.5;
+    transition: opacity 500ms;
+}
+
+/* REGISTRO DE SÍNTOMAS */
+
+.form-container{
+    margin: 5px auto;
+    max-width: 500px;
+    border-width: 4px;
+    padding: 2em;
+    background-image: white;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.title{
+    width: 100%;
+    font-size: 32px;
+    color: rgb(6, 6, 100);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sub-container{
+    padding: 15px;
+    margin: 15px 0;
+    background-color: rgb(242, 241, 250);
+}
+
+.subtitle{
+    width: 100%;
+    font-size: 17px;
+    text-align: center;
+    /* font-weight: bold; */
+    padding-bottom: 8px;
+}
+
+.subtext{
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.item{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.check{
+    display: block;
+    padding: 10px;
+}
+
+.buttons{
+    padding-top: 30px;
+}
+
+.item label{
+    display: inline-block; /* para poder aplicarle las propiedades width y height*/
+    width: 105px;
+}
+
+.item input{
+    width: 270px;
+    height: 30px;
+    padding: 5px;
+}
+
+.item input:hover{
+    border-color: rgb(5, 3, 119);
+}
+
+.item select{
+    width: 270px;
+    height: 30px;
+    padding: 5px;
+}
+
+.check label{
+    display: inline-block; 
+    width: 150px;
+    margin-left: 5px;
+}
+
+
+.buttons input{
+    margin:  0px 45px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(5, 35, 133);
+    height: 38px;
+    font-size: 15px;
+    /* width: 90px; */
+    border-radius: 5px;
+    padding: 0px 15px;
+}
+
+.buttons input:hover{
+    color: rgb(20, 73, 248);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+/* TABLA */
+
+.table-darkblue thead{
+    background-color: rgb(4, 4, 65);
+    color: white;
+}
+/* FOOTER */
+
+.footer{
+    margin-top: 28px;
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 15px;
+
+}
+
+.text-footer:hover{
+    cursor:default;
+    color: rgb(80, 80, 77);
+}
+
+
+
+
+    
