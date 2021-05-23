@@ -137,7 +137,7 @@ body{
 }
 
 .option-card-img:hover{
-    opacity: 0.5;
+    opacity: 0.4;
     transition: opacity 500ms;
 }
 
@@ -251,11 +251,40 @@ form{
 }
 
 /* TABLA */
+.table-darkblue{
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid rgb(4, 4, 65);
+    border-radius: 5px;
+}
 
 .table-darkblue thead{
     background-color: rgb(4, 4, 65);
     color: white;
 }
+
+.table-darkblue thead th{
+    padding: 4px 10px;
+    font-size: 15px;
+    min-width: 95px;
+}
+
+.table-darkblue thead .id{
+    min-width: 40px !important;
+}
+
+.table-darkblue tbody tr:nth-child(even){
+    background-color: rgb(237, 237, 245);
+}
+
+.table-darkblue tbody td{
+    font-size: 14px;
+    text-align: center;
+    padding: 6px 5px;
+    border-bottom: 1px solid rgb(4, 4, 65);
+
+}
+
 /* FOOTER */
 
 .footer{

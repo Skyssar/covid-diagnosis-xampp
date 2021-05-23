@@ -16,7 +16,7 @@
 ?>
 
     <div class="container form-container">
-        <form action="saveData.php" method="post">
+        <form action="save-data.php" method="post">
             <div class="title">
                 Registro de síntomas
             </div>

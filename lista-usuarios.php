@@ -13,12 +13,15 @@
 <?php
     include("html/header.html");
 ?>
-    
+    <div class="enunciado">
+           Listado de usuarios registrados
+    </div>
+
     <table class="table-darkblue">
 
         <thead>
             <tr>
-                <th>Ítem</th>
+                <th class="id">No</th>
                 <th>Nombres</th>
                 <th>Apellidos</th>
                 <th>Ciudad</th>
@@ -27,7 +30,9 @@
                 <th>Fiebre</th>
                 <th>Malestar</th>
                 <th>Diarrea</th>
+                <th>Estómago</th>
                 <th>Tos</th>
+                <th>Vómitos</th>
                 <th>Mareo</th>
                 <th>Eliminar</th>
             </tr>
@@ -35,9 +40,9 @@
         <tbody>
             <?php
 
-            include("connectDB.php");
+            include("db/connectDB.php");
 
-            $sql = "SELECT * FROM personas p INNER JOIN sintomas s ON p.id = s.id_sintomas";
+            $sql = "SELECT * FROM personas p INNER JOIN sintomas s ON p.id = s.id_persona ORDER BY id ASC";
 
             $resultado = mysqli_query($conexion, $sql) or die ("Consulta errónea: ".mysqli_error($conexion));
 
@@ -64,9 +69,11 @@
                     <td>'.$persona["fiebre"].'</td>
                     <td>'.$persona["malestar"].'</td>
                     <td>'.$persona["diarrea"].'</td>
+                    <td>'.$persona["estomago"].'</td>
                     <td>'.$persona["tos"].'</td>
+                    <td>'.$persona["vomitos"].'</td>
                     <td>'.$persona["mareo"].'</td>
-                    <td><a href="eliminar.php?id='.$persona["id"].'"> <img alt="Eliminar" src="img/ui.png" width="25px"></td>
+                    <td><a href="eliminar-usuario.php?id='.$persona["id"].'"> <img alt="Eliminar" src="img/ui.png" width="25px"></a></td>
                 </tr>';
             }
 
