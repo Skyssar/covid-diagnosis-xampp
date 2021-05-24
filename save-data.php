@@ -70,6 +70,8 @@
             $consulta2 = mysqli_query($conexion, "SELECT id FROM personas ORDER BY id DESC LIMIT 1;");
 
             $result = mysqli_fetch_array($consulta2);
+            
+            // save the id
             $id = $result["id"];
 
             $estornudos = $values["estornudos"];
