@@ -25,11 +25,11 @@
         </div>
         <div class="option-card">
             <div class="option-card-text">Registrar síntomas</div>
-            <a href="registro-sintomas.php"><img class="option-card-img" src="img/covid.jpg" alt="opt1"></a>
+            <a href="registro-sintomas.php"><img class="option-card-img" src="img/ui.png" alt="opt1"></a>
         </div>
         <div class="option-card">
             <div class="option-card-text">Listado de usuarios</div>
-            <a href="lista-usuarios.php"><img class="option-card-img" src="img/listado.jpg" alt="opt2"></a>
+            <a href="lista-usuarios.php"><img class="option-card-img" src="img/happy-ui.jpg" alt="opt2"></a>
         </div>
 
     </div>

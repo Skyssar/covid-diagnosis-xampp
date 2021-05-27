@@ -36,7 +36,7 @@
             if ($update){
                 echo "Todo guardado";
             } else{
-                echo "what?";
+                echo "Ha ocurrido un problema";
             }
             
         } else
@@ -84,7 +84,7 @@
                 <div class="item">
                     <label for="city">Ciudad:</label>
                     <select name="ciudad" id="city">
-                        <option value='<?php echo $persona["ciudad"]; ?>' selected><?php echo $persona["ciudad"]; ?></option>
+                        <option value='' disabled>Seleccione...</option>
                         <option value="Arauca">Arauca</option>
                         <option value="Armenia">Armenia</option>
                         <option value="Barranquilla">Barranquilla</option>
@@ -119,6 +119,9 @@
                         <option value="Yopal">Yopal</option>
                     </select>
                 </div>
+                <script>
+                    document.getElementById("city").value='<?php echo $persona["ciudad"]; ?>'
+                </script>
                 <div class="item">
                     <label for="address">Dirección:</label>
                     <input type="text" name="direccion" id="address" value='<?php echo $persona["direccion"]; ?>' placeholder="Ingrese su dirección">
