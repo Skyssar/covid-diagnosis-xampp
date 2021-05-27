@@ -34,7 +34,7 @@
                 <th>Tos</th>
                 <th>Vómitos</th>
                 <th>Mareo</th>
-                <th>Eliminar</th>
+                <th>Opciones</th>
             </tr>
         </thead>
         <tbody>
@@ -73,7 +73,8 @@
                     <td>'.$persona["tos"].'</td>
                     <td>'.$persona["vomitos"].'</td>
                     <td>'.$persona["mareo"].'</td>
-                    <td><a href="eliminar-usuario.php?id='.$persona["id"].'"> <img class="icon-img" alt="Eliminar" src="img/ui.png" width="25px"></a></td>
+                    <td><a href="eliminar-usuario.php?id='.$persona["id"].'"> <img class="icon-img" alt="Eliminar" src="img/ui.png" width="25px"></a>-
+                    <a href="editar-usuario.php?id='.$persona["id"].'"> <img class="icon-img" alt="Eliminar" src="img/queen.jpg" width="25px"></a></td>
                 </tr>';
             }
 
